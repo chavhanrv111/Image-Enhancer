@@ -2,7 +2,7 @@ name: manual
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
   # to run this workflow manually from the Actions tab
   workflow_dispatch:
