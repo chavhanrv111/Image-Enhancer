@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
 
-  # to run this workflow manually from the Actions tab
+  # to run this workflow manually from the Actio ns tab
   workflow_dispatch:
 
 jobs:
