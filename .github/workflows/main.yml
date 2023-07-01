@@ -1,20 +1,21 @@
-name: Sync to Hugging Face hub
+name: manual
+
 on:
   push:
     branches: [main]
 
-  # to run this workflow manually from the Actions tab
+  # to run this workflow manually from the Actio ns tab
   workflow_dispatch:
 
 jobs:
   sync-to-hub:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          lfs: true
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git lfs fetch --all;git push --force  https://chavhanrv111:$HF_TOKEN@huggingface.co/spaces/Sumit7864/Image-Enhancer main
+          
+        run: git lfs fetch --all;git push --force https://chavhanrv111:$HF_TOKEN@huggingface.co/spaces/Sumit7864/Image-Enhancer
